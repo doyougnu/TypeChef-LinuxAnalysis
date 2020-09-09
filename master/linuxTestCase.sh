@@ -1,5 +1,5 @@
-#!/bin/bash
-#!/bin/bash -vxe
+#! /usr/bin/env bash
+#! /usr/bin/env bash -vxe
 
 #java -jar sbt-launch-0.7.4.jar  compile
 

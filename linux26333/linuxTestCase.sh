@@ -1,5 +1,5 @@
-#!/bin/bash
-#!/bin/bash -vxe
+#! /usr/bin/env bash
+#! /usr/bin/env bash -vxe
 
 #java -jar sbt-launch-0.7.4.jar  compile
 
@@ -24,7 +24,6 @@ filesToProcess() {
 system=linux-redhat
 partialPreprocFlags="--bdd -x CONFIG_ --xtc\
   --featureModelFExpr approx.fm \
-  --typeSystemFeatureModelDimacs=pcs/x86.dimacs \
   --include=pcs/x86.completed.h --include=pcs/x86.nonbool.h --include=partialConf.h \
   -c ../$system.properties \
   --openFeat pcs/x86.open \
@@ -34,6 +33,7 @@ partialPreprocFlags="--bdd -x CONFIG_ --xtc\
   --adjustLines"
 
 
+# --typeSystemFeatureModelDimacs=pcs/x86.dimacs \
 #  --typeSystemFeatureModelDimacs=2.6.33.3-2var.dimacs \
 #  --include linux_defs.h --include $srcPath/include/generated/autoconf.h
 
