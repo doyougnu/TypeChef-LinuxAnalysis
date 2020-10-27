@@ -22,7 +22,16 @@ filesToProcess() {
 # Note: this clears $partialPreprocFlags
 #partialPreprocFlags="-c linux-redhat.properties -I $(gcc -print-file-name=include) -x CONFIG_ -U __INTEL_COMPILER \
 system=linux-redhat
-partialPreprocFlags="--bdd -x CONFIG_ --xtc\
+# partialPreprocFlags="--bdd -x CONFIG_ --xtc\
+#   --featureModelFExpr approx.fm \
+#   --include=pcs/x86.completed.h --include=pcs/x86.nonbool.h --include=partialConf.h \
+#   -c ../$system.properties \
+#   --openFeat pcs/x86.open \
+#   --writePI --recordTiming --lexdebug --errorXML --interface \
+#   --dumpcfg \
+#   --parserstatistics \
+#   --adjustLines"
+partialPreprocFlags="-x CONFIG_ --xtc\
   --featureModelFExpr approx.fm \
   --include=pcs/x86.completed.h --include=pcs/x86.nonbool.h --include=partialConf.h \
   -c ../$system.properties \
